@@ -1,7 +1,6 @@
 // import { render, screen } from '@testing-library/react'
 import { render, screen } from '../../../test-utils/testing-library-utils'
 import userEvent from '@testing-library/user-event'
-import { OrderDetailsProvider } from '../../../context/OrderDetails'
 import Options from '../Options'
 import OrderEntry from '../OrderEntry'
 
@@ -60,7 +59,7 @@ test('update toppings subtotal when toppings change', async () => {
   expect(toppingsSubtotal).toHaveTextContent('1.50')
 })
 
-describe.only('grand total', () => {
+describe('grand total', () => {
   const user = userEvent.setup()
   test('grand total updates properly if scoop is added first', async () => {
     render(<OrderEntry />)
