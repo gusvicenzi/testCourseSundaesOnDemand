@@ -35,11 +35,9 @@ export const handlers = [
   }),
   rest.post('http://localhost:3030/order', (req, res, ctx) => {
     return res(
-      ctx.json([
-        {
-          orderNumber: '94857306821'
-        }
-      ])
+      ctx.json({
+        orderNumber: '94857306821'
+      })
     )
   })
 ]
