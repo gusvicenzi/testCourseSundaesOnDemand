@@ -20,6 +20,6 @@ test('validate scoop inputs', async () => {
 
   // input invalid with more than 10
   await user.clear(input)
-  await user.type(input, '2.5')
+  await user.type(input, '20')
   expect(input).toHaveClass('is-invalid')
 })
